@@ -5,10 +5,10 @@
    
    <body>
       <?php
-         $dbhost = 'localhost:3036';
+         $dbhost = 'localhost:3306';
          $dbuser = 'root';
          $dbpass = '';
-         $conn = mysql_connect($dbhost, $dbuser, $dbpass);
+         $conn = mysqli_connect($dbhost, $dbuser, $dbpass);
          
          if(! $conn ) {
             die('Could not connect: ' . mysql_error());
