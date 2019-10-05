@@ -11,7 +11,7 @@ if ($conn->connect_error) {
 }
 
 // Create database
-$sql = "CREATE DATABASE myDB";
+$sql = "CREATE DATABASE birddog";
 if ($conn->query($sql) === TRUE) {
     echo "Database created successfully";
 } else {
