@@ -11,7 +11,7 @@
          $conn = mysqli_connect($dbhost, $dbuser, $dbpass);
          
          if(! $conn ) {
-            die('Could not connect: ' . mysql_error());
+            die('Could not connect: ' . mysqli_error());
          }
          echo 'Connected successfully<br />';
          $sql = "CREATE TABLE tutorials_tbl( ".
@@ -20,14 +20,14 @@
             "tutorial_author VARCHAR(40) NOT NULL, ".
             "submission_date DATE, ".
             "PRIMARY KEY ( tutorial_id )); ";
-         mysql_select_db( 'TUTORIALS' );
-         $retval = mysql_query( $sql, $conn );
+         mysqli_select_db( 'TUTORIALS' );
+         $retval = mysqli_query( $sql, $conn );
          
          if(! $retval ) {
-            die('Could not create table: ' . mysql_error());
+            die('Could not create table: ' . mysqli_error());
          }
          echo "Table created successfully\n";
-         mysql_close($conn);
+         mysqli_close($conn);
       ?>
    </body>
 </html>
